@@ -110,8 +110,6 @@ class NetCat_UDP:
              self.send()
                
     def send(self):
-        self.socket.connect((self.args.target, self.args.port))  
-        #if self.buffer:
         self.socket.sendto(self.buffer, (self.args.target, self.args.port))
         try:
             while True:
